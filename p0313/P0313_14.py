@@ -14,10 +14,8 @@ c_number = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 
 ran_num = random.sample(c_number,k=2)
 print(ran_num)
-for i, s in enumerate(c_number):
-    if ran_num[0] in c_number:
-        print(f"랜덤숫자 : {ran_num[0]} -> {c_number[i]}번방에 있습니다.")
-        print(f"랜덤숫자 : {ran_num[1]} -> {c_number[i]}번방에 있습니다.")
+for i in ran_num:
+        print(f"랜덤숫자 : {i} -> {i+1}번방에 있습니다.")
 
 if ran_num[0] > ran_num[1]:
     print(f"큰 수: {ran_num[0]}, 작은 수: {ran_num[1]}") 
