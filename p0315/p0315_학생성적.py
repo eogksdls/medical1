@@ -99,9 +99,7 @@ def stu_subjuct_update(choice,chk,s_1):
     # 합계 수정
     students[chk]["total"] = students[chk]["kor"] + students[chk]["eng"] + students[chk]["math"]
     students[chk]["avg"] = float("{:.2f}".format(students[chk]["total"]/3))
-    
-    print("{} 학생의 {}점수는 {}으로 수정되었습니다.".format(s_name,s_title[choice],students[chk]["kor"]))
-    print(students[chk])
+
     
 def stu_update():
     while True:
@@ -109,38 +107,40 @@ def stu_update():
         print("\t[ 학생 검색 ]")
         print('-'*50)
         chk = 0
-        s_name = input("찾으시는 학생의 이름을 입력하세요(0.취소):  ")
+        s_name = input("성적수정을 원하는 학생의 이름을 입력하세요(0.취소):  ")
         if s_name == "0":
-            print("학생 검색을 취소하였습니다.")
+            print("학생성적 수정을 취소하였습니다.")
             break
         for sear_dic in students:
             if s_name == sear_dic["name"]:
                 break
             chk += 1
-        print("찾고자하는 학생의 위치:",chk)
+        print("찾고자 하는 학생의 위치:",chk)
         
         if chk == len(students):
             print("{} 학생은 없습니다. 다시 입력하세요.".format(s_name))
         else:
-                print('{} 학생을 찾았습니다.'.format(s_name))
-                while True:
-                    print("\t[ 수정할 과목 선택 ]")
-                    print("-"*55)
-                    print("1. 국어\t2. 영어\t3. 수학")
-                    choice = int(input('수정하려는 과목을 선택하세요.(0.취소):  '))
-                    if choice == 1:
-                        s_1 = "kor"
-                        stu_subjuct_update(choice,chk,s_1)
-                    elif choice == 2:
-                        s_1 = "eng"
-                        stu_subjuct_update(choice,chk,s_1)
-                    elif choice == 3:
-                        s_1 = "math"
-                        stu_subjuct_update(choice,chk,s_1)
-                    else:
-                        print("과목 수정을 취소하셨습니다.")
-                        print('*'*55)
-                        break
+            print('{} 학생을 찾았습니다.'.format(s_name))
+            while True:
+                print("\t[ 수정할 과목 선택 ]")
+                print("-"*55)
+                print("1. 국어\t2. 영어\t3. 수학")
+                choice = int(input('수정하려는 과목을 선택하세요.(0.취소):  '))
+                if choice == 1:
+                    s_1 = "kor"
+                    stu_subjuct_update(choice,chk,s_1)
+                elif choice == 2:
+                    s_1 = "eng"
+                    stu_subjuct_update(choice,chk,s_1)
+                elif choice == 3:
+                    s_1 = "math"
+                    stu_subjuct_update(choice,chk,s_1)
+                else:
+                    print("과목 수정을 취소하셨습니다.")
+                    print('*'*55)
+                    break
+                print("{} 학생의 {}점수는 {}으로 수정되었습니다.".format(s_name,s_title[choice],students[chk]["kor"]))
+                print(students[chk])
     return s_name
 # -----------------------------------------------------------------
 # 등수처리함수
@@ -186,17 +186,16 @@ def stu_del():
             else:
                 del(students[chk])
                 print('{} 학생의 성적이 삭제되었습니다.'.format(search))
-                print(students)
+                
     return chk
 # -----------------------------------------------------------------------
 # 학생성적 파일 저장 함수
 def stu_save():
-    f = open("stu.txt","a",encoding="utf-8")
-    
-    stu_dic = students[len(students)-1]
-    f.write("{},{},{},{},{},{},{},{}\n".format(stu_dic["stuNo"],stu_dic["name"],stu_dic["kor"],
-                                             stu_dic["eng"],stu_dic["math"],stu_dic["total"],
-                                             stu_dic["avg"],stu_dic["rank"]))
+    f = open("stu.txt","w",encoding="utf-8")
+    for stu in students:
+        f.write("{},{},{},{},{},{},{},{}\n".format(stu["stuNo"],stu["name"],stu["kor"],
+                                             stu["eng"],stu["math"],stu["total"],
+                                             stu["avg"],stu["rank"]))
     print("모든 내용이 파일에 저장되었습니다.")
 
     f.close()
