@@ -19,7 +19,7 @@ class Car:
         self.door = door
         self.tire = tire
         self.speed = speed
-        Car.carCount += 1
+        Car.carCount += 1   # 클래스 변수
         self.carNo = Car.carCount
     
     def up_speed(self):
@@ -27,7 +27,7 @@ class Car:
     def down_speed(self):
         self.speed -= 10
 
-    def __str__(self):     # 이걸 미리 써두면, 출력이 편하다
+    def __str__(self):     # 이걸 미리 써두면, 출력이 편하다(형식 출력)
         return f"{self.carNo}\t{self.color}\t{self.door}\t{self.tire}\t{self.speed}"
 # __str__(self): 클래스 자체의 내용을 출력하고 싶을 때 형식을 지정하는 메서드
 
@@ -52,8 +52,8 @@ car_list.append(c3)
 # 출력------------------------------------------------------------
 print("번호\tcolor\tdoor\ttire\tspeed")
 print('-'*40)
-for i in range(3):
-    print(car_list[i])  # -> __str__에서 적어놓은 형식에 따라 출력
+for car in car_list:
+    print(car)  # -> __str__에서 적어놓은 형식에 따라 출력
     
     # __str__(self): 안썼을 때
     # print(car_list[i].carNo, car_list[i].color, car_list[i].door \
