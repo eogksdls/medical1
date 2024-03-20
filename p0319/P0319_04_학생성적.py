@@ -6,7 +6,7 @@ class Student:
     
     def __init__(self,name,kor,eng,math,stuNo=0,rank=0):
         if stuNo == 0:
-            self.stuNo = Student.count
+            self.stuNo = Student.count   # 여기선 클래스변수 Student.count = 1
         else:
             self.stuNo = stuNo
         self.name = name
@@ -108,7 +108,7 @@ def stu_search(choice):
     s_list =[]
     for s in students:
         if choice == 1:
-            if s.name.find(search) != -1:
+            if s.name.find(search) != -1: # 없으면 -1 출력
                 s_list.append(s)
         elif choice == 2:
                 if s.total >= search :
