@@ -110,10 +110,10 @@ def stu_search(choice):
         if choice == 1:    # 학생 이름으로 출력(일부 문자 포함시 모두 검색되는 함수식)
             if s.name.find(search) != -1: # find(): 특정문자를 포함하는 문자열 인덱스 출력 # 없으면 -1 출력하기 때문에, -1이 아닐때는 학생이 검색된 것
                 s_list.append(s)   # s_list에 인덱스 값 추가
-        elif choice == 2:   # 몇점 이상인 학생 모두 검색
+        elif choice == 2:   # 몇 점 이상인 학생 모두 검색
                 if s.total >= search :
                     s_list.append(s)
-        elif choice == 3:   # 몇점 미만인 학생 모두 검색
+        elif choice == 3:   # 몇 점 미만인 학생 모두 검색
                 if s.total < search :
                     s_list.append(s)
     if len(s_list) != 0:   # s_list에 인덱스값이 추가됨 : 학생이 검색된 것, len(s_list) == 0이란 것은 학생을 찾을 수 없음
@@ -135,12 +135,12 @@ def stu_modify(chk):   # 합계 수정
 def stu_rank():
     print('[ 등수 처리 ]')
     print('-'*55)
-    for i_dic in students:
+    for i in students:
         rank_cnt = 1 # 등수 처리
-        for j_dic in students:
-            if i_dic.total < j_dic.total:
+        for j in students:
+            if i.total < j.total:
                 rank_cnt += 1 # 비교대상 크기가 더 크면 1증가(=순위 내려감)
-        i_dic.rank = rank_cnt # 등수 위치에 저장
+        i.rank = rank_cnt # 등수 위치에 저장
     print('등수 처리가 완료되었습니다.')
     print('*'*55)
 
@@ -173,7 +173,7 @@ def stu_del():
                 print("삭제를 취소합니다.")
                 break
             else:
-                del(students[chk])
+                del(students[chk])   # 인덱스 위치 리스트 삭제
                 print(f'{search} 학생의 성적이 삭제되었습니다.')
                 print('-'*50)
 #----------------------------------------------------------------------------------
