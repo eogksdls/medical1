@@ -129,6 +129,7 @@ sub = ["","국어","영어","수학"]
 def stu_modify(chk):   # 합계 수정
     students[chk].total = students[chk].kor + students[chk].eng + students[chk].math
     students[chk].avg = float("{:.2f}".format(students[chk].total/3))
+    stu_print_main()
     print(students[chk])
     
 # 등수처리-------------------------------------------------------------------------
@@ -217,10 +218,12 @@ while True:
                 chk += 1
                 
             if chk == len(students):
-                print("찾고자 하는 학생이 없습니다. 다시 검색하세요.")
+                print("조회된 학생이 없습니다. 다시 검색하세요.")
             else:
                 print("찾고자 하는 학생의 위치 :",chk)
+                stu_print_main()
                 print(students[chk])
+                print('*'*70)
                 # 수정과목 선택
                 print("\t[ 수정할 과목 선택 ]")
                 print('-'*45)
