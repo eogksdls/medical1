@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script>
+        function btn(){
+            alert("경고창을 띄웁니다");
+            frm.submit()  /*아래 type이 button일때 submit이 안되기 때문에 이 코드를 작성해줘야 아이디/비번 웹서버에 제출 가능 */
+        }
+    </script>
+</head>
+<body>
+    <h2>폼만들기</h2>
+    <!-- action:주소이동, method: get(url에 submit data 노출),post(노출안됨),(또는 put,delete) -->
+    <form action="h0327_02.html" method="post" name="frm" >
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id" value="aaa"><br>
+        <label>성별</label><br>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">남자</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">여자</label><br>
+        <label>패스워드</label>
+        <input type="password" name="pw"><br>
+        <input type="button" onclick="btn()" value="로그인"> <!--btn():자바스크립트 함수-->
+    </form>
+
+</body>
+</html>
