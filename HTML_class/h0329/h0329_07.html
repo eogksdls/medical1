@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding: 0;}
+        .all{background: rgb(255,255,255);
+            border: 1px solid rgb(234,234,234); width: 280px; height: 400px;
+            box-shadow: 3px 3px 5px 3px rgb(184, 181, 181); }
+        img{width:280px; height: 210px;}
+        .htl{ display:block; border:rgb(51,51,51); font-weight: 400; height: 170px;
+            padding: 0 20px 30px 20px;}
+        .htl span{ color: rgb(129,115,184); font-size:13px; font-weight: 400; 
+            line-height: 13px; margin-top: 40px;}
+        .name{ color:rgb(51,51,51); margin: 0;}
+        .name strong{box-sizing: border-box; color:rgb(17,17,17);
+            font-size: 17px; font-weight: 600; line-height: 27px;
+            margin-bottom: 12px; padding: 0;}
+        .name p{box-sizing: border-box; color:rgb(51,51,51);
+            font-size: 13px; font-weight: 400; line-height: 18px; 
+            margin-top: 15px; max-height: 45px;}
+        .price{box-sizing: border-box; color: rgb(51,51,51);
+            font-weight: 400; margin: 18px 0 3px 0;}
+        .price strong{box-sizing: border-box; color: rgb(17,17,17);
+            font-size: 22px; font-weight: 600; line-height: 22px ;}
+        .price span{color: rgb(17,17,17); font-size: 17px; font-weight: 400;
+            line-height: 17px;}
+        section{width:920px; display: flex;
+        justify-content: space-between;}
+        
+        .main{width: 1200px; height: 566px; margin:50px auto;
+        display: flex; justify-content: flex-end;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <section>
+            <div class="all">
+                <img src="images/hana1.jpg">
+                <div class='htl'>
+                    <span>패키지</span>
+                    <div class="name">
+                        <strong>오사카/고베 3~4일</strong>
+                        <p>#가성비추천#핵심관광</p>
+                    </div>
+                    <div class="price">
+                        <strong>689,900<span>원~</span></strong>
+                    </div>
+                </div>
+            </div>
+            <div class="all">
+                <img src="images/hana2.jpg">
+                <div class='htl'>
+                    <span>패키지</span>
+                    <div class="name">
+                        <strong >도쿄/시즈오카 3~5일</strong>
+                        <p>#출발확정 모아보기</p>
+                    </div>
+                    <div class="price">
+                        <strong>829,900<span>원~</span></strong>
+                    </div>
+                </div>
+            </div>
+            <div class="all">
+                <img src="images/hana3.jpg">
+                <div class='htl'>
+                    <span>패키지</span>
+                    <div class="name">
+                        <strong>훗카이도 4일</strong>
+                        <p>#베스트인기코스 #온천호텔</p>
+                    </div>
+                    <div class="price">
+                        <strong>889,900<span>원~</span></strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

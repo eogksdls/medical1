@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap');
+        *{margin:0; padding:0;
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;}
+        
+        .all{ width:1230px; height: 355px; margin: 0 auto;
+        display: flex; justify-content: space-between;}
+
+        .main{width: 407px; height: 355px;}
+        .box{width: 377px; height: 355px; margin: 0 15px;}
+        .img{ position: relative; overflow: hidden; height: 255px; }
+        img{ width: 100%; position: absolute; top: 0px; left: 50%; margin-left: -50%;}
+        
+        .text{height: 100px; box-sizing: border-box;
+        padding-top: 38px;}
+        .text .t01{font-size: 20px; color: #1d1d1d; font-weight: 600;
+        line-height: 1.2; letter-spacing: -0.05em; display: block;}
+        .text .t02{font-size: 15px; color: #5c5c5c; font-weight: 400;
+        line-height: 1.5; letter-spacing: -0.02em; padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="main">
+            <div class="box">
+                <div class="img">
+                    <img src="img/img01.jpg">
+                </div>
+                <div class="text">
+                    <p class="t01">스윗 골드 에디션</p>
+                    <p class="t02">이용기간 : 2024.04.01~2024.06.30</p>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="box">
+                <div class="img">
+                    <img src="img/img02.jpg">
+                </div>
+                <div class="text">
+                    <p class="t01">베이비문 포레스트(with 압소바)</p>
+                    <p class="t02">이용기간 : 2024.03.18~2024.06.30</p>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="box">
+                <div class="img">
+                    <img src="img/img03.jpg">
+                </div>
+                <div class="text">
+                    <p class="t01">꼬마 숲탐험 패키지</p>
+                    <p class="t02">이용기간 : 2024.03.01~2024.04.30</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
