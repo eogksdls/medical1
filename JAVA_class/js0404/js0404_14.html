@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if</title>
+    <script>
+        // 1-100까지 숫자를 입력받아, 90:A 80:B 70:C 60 이하 F
+        var score = Number(prompt("점수를 입력하세요."));
+        if (score >= 90){
+            if (score >= 98){
+                document.write("당신의 성적은 A+ 입니다.");
+            }
+            else if (score >= 94){
+                document.write("당신의 성적은 A0 입니다.");
+            }
+            else{
+                document.write("당신의 성적은 A- 입니다.");
+            }
+        }
+        else if (score >= 80){
+            if (score >= 88){
+                document.write("당신의 성적은 B+ 입니다.");
+            }
+            else if (score >= 84){
+                document.write("당신의 성적은 B0 입니다.");
+            }
+            else{
+                document.write("당신의 성적은 B- 입니다.");
+            }
+        }
+        else if (score >= 70){
+            if (score >= 78){
+                document.write("당신의 성적은 C+ 입니다.");
+            }
+            else if (score >= 74){
+                document.write("당신의 성적은 C0 입니다.");
+            }
+            else{
+                document.write("당신의 성적은 C- 입니다.");
+            }
+        }
+        else if (score >= 60){
+            if (score >= 68){
+                document.write("당신의 성적은 D+ 입니다.");
+            }
+            else if (score >= 64){
+                document.write("당신의 성적은 D0 입니다.");
+            }
+            else{
+                document.write("당신의 성적은 D- 입니다.");
+            }
+        }
+        else{
+            document.write("당신의 성적은 F 입니다.");
+        }
+
+
+
+
+        /*
+        //숫자를 입력받아 양수,0,음수를 출력하세요
+        num = Number(prompt("숫자를 입력하세요."));
+        if(num>0){
+            document.write("양수입니다.")
+        }
+        else if(nu==0){
+            document.write("0 입니다.")
+        }
+        else{
+            document.write("음수입니다.")
+        }
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

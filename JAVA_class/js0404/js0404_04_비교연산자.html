@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교연산자</title>
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var f = "20";
+        var result;
+        var result2;
+
+        document.write(100+200+"200","<br>"); // 300200으로 출력
+
+        result = a > b;
+        document.write("a > b : "+result+"<br>");
+        result2 = a < b;
+        document.write("a < b : "+result2+"<br>");
+        var result3 = a != b; // 10!=30 true
+        document.write("result3 : "+result3+"<br>");
+        document.write("--------------------------------<br>");
+
+        if(b==f){ // 들어가있는 값만 비교 -> 문자형 타입을 자동으로 숫자형으로 변경해서 비교해줌
+            document.write("같습니다.<br>")
+        }else{
+            document.write("다릅니다.<br>")
+        }
+        document.write("--------------------------------<br>");
+        
+        if(b===f){ // 들어가 있는 값과 타입까지 비교 -> 출력: 다릅니다.
+            document.write("같습니다.<br>")
+        }else{
+            document.write("다릅니다.<br>")
+        }
+        document.write("--------------------------------<br>");
+        
+        
+        if(a>b){ // 10 > 20 = false
+            document.write(a+"이(가) 더 큰 숫자입니다.<br>");
+        }else{
+            document.write(b+"이(가) 더 큰 숫자입니다.<br>");
+        }
+
+        if(b>c){ // 20 > 10 = true
+            document.write(b+"이(가) 더 큰 숫자입니다.<br>");
+        }else{
+            document.write(c+"이(가) 더 큰 숫자입니다.<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

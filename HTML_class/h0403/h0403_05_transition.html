@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션</title>
+    <style>
+        div{ width: 100px; height: 100px; background: blue;
+        border: 1px solid black;
+        /* transition-property: width, height, background ;
+        transition-duration: 1s, 2s, 3s; 
+        /* transition-delay: 3s; /* 대기 후 transition */
+        /* transition-timing-function: ease-out; 
+        /* <진행속도>
+        ** ease-in: 시작은 느리게 빨리 끝나는 
+        ** ease-out: 시작은 빠르게 서서히 끝나는 
+        */
+        transition: all 1s ease-in; /* property, duration, delay, function */
+        }
+        div:hover{ width: 200px; height: 200px; background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="sub"></div>
+    </div>
+</body>
+</html>

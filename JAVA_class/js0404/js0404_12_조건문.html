@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 if</title>
+    <script>
+        /* 1-100 사이의 랜덤숫자 맞추기~ */
+        var ran = parseInt(Math.random() * 100)+1;
+        var my_num = Number(prompt("숫자를 입력하세요.",ran));
+        document.write("랜덤숫자: ",ran,"<br>");
+        document.write("내가 입력한 숫자: ",my_num,"<br>");
+
+        if(my_num==ran){ 
+            document.write("정답입니다!");}
+        else if(my_num>ran){ 
+            document.write("입력한 숫자가 랜덤 숫자보다 큽니다.");}
+        else {
+            document.write("입력한 숫자가 랜덤 숫자보다 작습니다.");}
+        
+        /* Math.random() */
+        /* var ran100 = parseInt(Math.random() * 100)+1; //1~100 사이 랜덤숫자
+        document.write(ran100); */
+
+        /*
+        // 2줄 이상은 {} 넣어야함.
+        var num = Number(prompt("숫자를 입력하세요."));
+        if(num<500) document.write("500보다 작은 수입니다.");
+        else document.write("500보다 큰 수입니다.");
+        */
+
+        /*
+        var num = 10;
+        if(num<500){
+            document.write("500보다 작은 수 입니다.");
+        }
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

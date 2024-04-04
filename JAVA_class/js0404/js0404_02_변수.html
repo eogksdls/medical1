@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+    <script>
+        var a = 10; // let const
+        var b = 2.5; // 변수 선언 시 var 적어주기!! 안붙여줘도 상관은 없지만.. 컴퓨터 입장에선 변수 정의를 확실히 해주는 것이 좋기 때문에
+        var c = "안녕";
+        var a = "선언";  // 중간에 a의 타입변환
+        var d = "100";
+        var e = true; //True(X) -> true(O) 소문자로 적어주세용!
+        console.log("a의 타입 : "+typeof(a))
+        console.log("b의 타입 : "+typeof(b))
+        console.log("c의 타입 : "+typeof(c))
+        console.log("a의 타입변환 : "+typeof(a))
+        console.log("d의 타입 : "+typeof(d))
+        console.log("e의 타입 : "+typeof(e)) // 타입: boolean
+        console.log("a+b : "+(a+b))
+        console.log("a+c : "+(a+c)) // 파이썬에서만 에러 자바 출력: '10안녕'
+        console.log("a+d : "+(a+d))
+        console.log("a+d 타입변환 : "+(a+Number(d))) // 출력: 110
+        var f;
+        console.log("f타입 : "+typeof(f)); // undefined
+        f = 10;
+        console.log("f타입2 : "+typeof(f)); // 중간에 타입변환 가능(number)
+        f = "반가워";
+        console.log("f타입3 : "+typeof(f)); // string
+        g = 1000;
+        console.log("g타입 : "+typeof(g))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

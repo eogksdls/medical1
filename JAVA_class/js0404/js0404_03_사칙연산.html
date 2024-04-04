@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사칙연산</title>
+    <script>
+        var num1 = 15;
+        var num2 = 2;
+        var result;
+        result = num1 + num2;
+        //화면출력
+        document.write("<h1>안녕하세요.</h1>"); //html 태그도 인식 가능
+        
+        document.write("num1 + num2 결과값 : "+result+"<br>");
+        result2 = num1 - num2;
+        document.write("num1 - num2 결과값 : "+result2+"<br>"); //,사용보단 +를 사용하는 것이 오류를 적게
+        result3 = num1 * num2;
+        document.write("num1 * num2 결과값 : "+result3+"<br>");
+        result4 = num1 / num2;
+        document.write("num1 / num2 결과값 : "+result4+"<br>");
+        result4 = parseInt(result4);  // 실수 -> 정수형 숫자로 변환
+        document.write(">> num1 / num2 몫 값 : "+result4+"<br>");
+        document.write("result4의 타입 : "+typeof(result4)+"<br><br>");
+
+        result5 = num1 % num2;
+        document.write("num1 % num2 결과값 : "+result5+"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

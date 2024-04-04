@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>++</title>
+    <script>
+        var num1 = 10;
+        var num2 = 20;
+        var num3 = 0;
+        var result;
+
+        num1--; //num1 = num1 - 1;
+        document.write(num1,"<br>"); //9
+        num1--;
+        document.write(num1,"<br>"); //8
+        num1++;
+        document.write(num1,"<br>"); //9
+
+        num3 =++num1; //현재:9
+        document.write("num3: ",num3,"<br>"); // 10
+        document.write("num1: ",num1,"<br>"); // 10
+
+        num3 = num1++; //현재10 -> num3 = num1(10) 값을 먼저 넘겨주고
+        // num1++ -> num1에 1을 더해주기 : 11
+        document.write("num3 : ",num3,"<br>"); //10
+        document.write("num1 : ",num1,"<br>"); //11
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

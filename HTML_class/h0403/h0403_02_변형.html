@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형</title>
+    <style>
+        *{margin:0; padding:0;}
+        .main,.main2,.main3,.main4,.main5{width: 1000px; height: 500px; margin: 0 auto; border: 1px solid black;
+        display: flex; justify-content: space-around; align-items: center;}
+        /* transform: translate() 이동 */
+        .main .c{width: 200px; height: 200px; border: 1px solid black;}
+        /* 마우스 커서를 올려두면 원하는 픽셀만큼 translate 이동 */
+        .main .c1:hover{transform: translate(50px,70px);}
+        /* x축 원하는 픽셀만큼 이동 */
+        .main .c2:hover{transform: translateX(30px);}
+        /* y축 원하는 픽셀만큼 이동 */
+        .main .c3:hover{transform: translateY(30px);}
+        img{width: 200px;}
+
+
+        /* transform: scale(sx,sy) 확대 */
+        .main2 .c{width: 200px; height: 200px; border: 1px solid black;}
+        .main2 .c1:hover{transform: scale(1.5);}
+        .main2 .c2:hover{transform: scaleX(2);}
+        .main2 .c3:hover{transform: scaleY(1.2);}
+
+        /* transform: rotate() 회전 */
+        .main3 .c{width: 200px; height: 200px; border: 1px solid black;}
+        .main3 .c1:hover{transform: rotate(20deg);}
+        .main3 .c2:hover{transform: rotate(-40deg);}
+        .main3 .c3:hover{transform: rotate3d(2.5,1.2,-1.5,45deg);}
+
+        .main4 .c{width: 200px; height: 200px; border: 1px solid black;}
+        .main4{perspective: 300px;}
+        .main4 .c1:hover{transform: rotateX(45deg);}
+        .main4 .c2:hover{transform: rotateY(45deg);}
+        .main4 .c3:hover{transform: scaleZ(45deg);}
+
+        /* transform: skew() 기울기, 왜곡*/
+        .main5 .c{width: 200px; height: 200px; border: 1px solid black;}
+        .main5{perspective: 300px;}
+        /* 어느 위치점에서 기우는가~
+        * left top & right top
+        * left bottom & right bottom  */
+        .tran_origin{ transform-origin: left top; }
+        .main5 .c1:hover{ transform: skewX(-30deg); } 
+        .main5 .c2:hover{ transform: skewY(15deg); }
+        .main5 .c3:hover{ transform: skew(-25deg,-15deg); }
+    </style>
+</head>
+<body>
+    <div class="main">1
+        <div class="c c1">
+            <img src="img/carpoo.png">
+        </div>
+        <div class="c c2">
+            <img src="img/carpoo.png">
+        </div>
+        <div class="c c3">
+            <img src="img/carpoo.png">
+        </div>
+    </div>
+    <div class="main2">2
+        <div class="c c1">
+            <img src="img/carpoo.png">
+        </div>
+        <div class="c c2">
+            <img src="img/carpoo.png">
+        </div>
+        <div class="c c3">
+            <img src="img/carpoo.png">
+        </div>
+    </div>
+    <div class="main3">3
+        <div class="c c1">
+            <img src="img/carpoo.png">
+        </div>
+        <div class="c c2">
+            <img src="img/carpoo.png">
+        </div>
+        <div class="c c3">
+            <img src="img/carpoo.png">
+        </div>
+    </div>
+    <div class="main4">4
+        <div class="c c1">
+            <img src="img/carpoo.png">
+        </div>
+        <div class="c c2">
+            <img src="img/carpoo.png">
+        </div>
+        <div class="c c3">
+            <img src="img/carpoo.png">
+        </div>
+    </div>
+    <div class="main5">5
+        <div class="c c1 tran_origin">
+            <img src="img/carpoo.png">
+        </div>
+        <div class="c c2">
+            <img src="img/carpoo.png">
+        </div>
+        <div class="c c3">
+            <img src="img/carpoo.png">
+        </div>
+    </div>
+</body>
+</html>

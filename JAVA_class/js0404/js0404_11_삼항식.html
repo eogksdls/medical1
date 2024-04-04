@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항식</title>
+    <script>
+        /* 삼항식 2번 작성 */
+        /*
+        var num1 = 9;
+        var num2  = 15;
+        var num3 = 7;
+        result = (num1>num2)?((num1>num3)?num1:num3):((num2>num3)?num2:num3);
+        document.write("가장 큰 값 : ",result,"<br>");
+        */
+         
+        // 숫자 3개를 입력받아 최솟값을 출력하세요.
+        var n1 = Number(prompt("1번째 숫자:  "));
+        var n2 = Number(prompt("2번째 숫자:  "));
+        var n3 = Number(prompt("3번째 숫자:  "));
+        result = (n1>n2)? ((n2>n3)?n3:n2) : ((n1>n3)?n3:n1);
+        document.write("최소값: ",result,"<br>");
+        
+        
+        /*
+        숫자를 입력받아,
+        홀수면 홀수입니다. 짝수면 짝수입니다.
+        를 출력하세요 
+        var num = Number(prompt("숫자를 하나 입력하세요:  "));
+        var result = (num%2==0)?"짝수입니다.":"홀수입니다.";
+        document.write(num,"은 ",result,"<br>"); 
+        */
+
+        /*
+        var input = "남자";
+        var result = (input=='남자')?"Male":"Female"; //True:False
+        document.write(result);
+
+        /*
+        var a = 10;
+        var b = 3;
+        var result = (a>b)?"정답입니다.":"오답입니다.";
+        document.write("결과 : ",result,"<br>");
+        */
+    </script>
+</head>
+<body>
+    <script>
+
+    </script>
+</body>
+</html>
