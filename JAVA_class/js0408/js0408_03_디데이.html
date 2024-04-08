@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 정보</title>
+    <style>
+        *{margin:0; padding:0;}
+    </style>
+    <script>
+        document.write("<h2>10월 31일까지 남은 일시분초</h2>")
+        var today = new Date(); //현재 날짜 객체
+        var d_day = new Date(2024,9,31); // 특정 날짜
+        var diffDate = d_day.getTime() - today.getTime();
+
+        //-------------------------------------------------------
+        // 일수
+        var day = Math.floor(diffDate/(1000*60*60*24));
+        var day_n = diffDate%(1000*60*60*24);
+        document.write("현재부터 남은 일: ",day,"일<br>");
+        //----------------------------------------------------------
+        // 시간
+        var hour = Math.floor(day_n/(1000*60*60));
+        var hour_n = (day_n%(1000*60*60));
+        document.write("현재부터 남은 시간: ",hour,"시간<br>");
+        //------------------------------------------------------------
+        // 분
+        var min = Math.floor(hour_n/(1000*60));
+        var min_n = (hour_n%(1000*60));
+        document.write("남은 분: ",min,"분<br>");
+        //------------------------------------------------------------
+        var second = (min_n/(1000));
+        document.write("남은 초: ",second,"초<br><br><br>");
+        
+        document.write(Math.ceil(day),"일&ensp;",Math.ceil(hour),"시간&ensp;",Math.ceil(min),"분&ensp;",second,"초<br>");
+
+        // 현재날짜까지 몇일 몇시간 몇초가 남았는지 출력...
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

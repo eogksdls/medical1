@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+    <style>
+        * {margin:0; padding:0;}
+        div{ width:500px; height: 100px; margin: 50px auto;}
+        button{width: 150px; height: 40px; display: block; margin: 0 auto;}
+        h2{font-size: 35px; text-align: center; border: 3px solid black;}
+        section{ width: 500px; margin: 0 auto; display: flex; justify-content: center;}
+        .title1{width: 150px; font-size: 30px; color: red; box-sizing: border-box;}
+        .title2{width: 350px; font-size: 30px; color: black; box-sizing: border-box;}
+    </style>
+    <script>
+        function auto_plus(){
+            auto1 = setInterval(minus_num,1000);}
+            // 1/1000 = 1초
+        minus_num = function(){
+            var today = new Date();
+            var d_day = new Date(2024,9,31,23,59,59);
+
+            var diffDate = d_day.getTime() - today.getTime();
+            
+            //-------------------------------------------------------
+            // 일수
+            var day = Math.floor(diffDate/(1000*60*60*24));
+            var day_n = diffDate%(1000*60*60*24);
+            
+            //----------------------------------------------------------
+            // 시간
+            var hour = Math.floor(day_n/(1000*60*60));
+            var hour_n = (day_n%(1000*60*60));
+            hour = String(hour).padStart(2,"0");
+            
+            //------------------------------------------------------------
+            // 분
+            var min = Math.floor(hour_n/(1000*60));
+            var min_n = (hour_n%(1000*60));
+            min = String(min).padStart(2,"0");
+            
+            //------------------------------------------------------------
+            // 초
+            var second = Math.floor(min_n/(1000));
+            second = String(second).padStart(2,"0");
+
+            var d_time = hour+" : "+min+" : "+second
+
+            document.querySelector(".title1").innerText = day+"일";
+            document.querySelector(".title2").innerText = d_time;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>[ 10/31일 까지 남은 시간 ]</h2>
+        <section>
+            <h2 class="title1">100일</h2>
+            <h2 class="title2">00 : 00 : 00</h2>
+        </section>
+        <br>
+        <button onclick="auto_plus()">시계START</button>
+        <button onclick="clearInterval(auto1)">시간멈춤</button>
+
+    </div>
+</body>
+</html>
