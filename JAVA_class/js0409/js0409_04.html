@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 두 수를 입력받아, 사칙연산을 해서 리턴 받은 후 출력하시오.
+        var num1 = Number(prompt("1번째 숫자를 입력하세요."));
+        var num2 = Number(prompt("2번째 숫자를 입력하세요."));
+        var arr_result = result(num1,num2);
+        
+        document.write("[ 사칙연산 결과값 ]<br>")
+        
+        function result(num1,num2){
+            add = num1 + num2;
+            min = num1 - num2;
+            mult = num1 * num2;
+            divide = num1 / num2;
+            var arr_result = [add,min,mult,divide];
+            return arr_result;
+        }
+        for (var i=0; i<arr_result.length; i++){
+            document.write(arr_result[i],"<br>");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

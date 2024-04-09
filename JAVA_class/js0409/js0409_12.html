@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>제이쿼리</title>
+    <script>
+        /*
+        // 제이쿼리 선언문 : 순차적 읽음으로 인한 순차 선언 오류 발생을 방지하기 위해
+        // 전체적으로 한 번 읽은 후 실행시키는 코드
+        $(document).ready(function(){
+            $("#txt").text('반갑습니다.');
+
+        });
+        // document.querySelector("#txt").innerText = "반갑습니다."; 위 코드와 동일
+        // 스크립트 순서에 따라 선언이 안될수도 있음
+        */
+        
+        // 제이쿼리 선택자
+        /*
+        $("#아이디") - 아이디선택자
+        $(".클래스") - 클래스선택자
+        $("태그") - 태그선택자
+        */
+        // 제이쿼리 축약($만 붙이면 다 돼) -> 맨 위 $코드와 동일
+        
+        let f_size = 10;
+        $(function(){
+            $("#txt").text('반갑습니다.');
+        });
+        
+        function fontBtn(){
+            f_size += 1;
+            $("#txt").css("font-size",f_size+"px");
+            
+        }
+
+    </script>
+    <style>
+        #txt{color:red;} /*css*/
+    </style>
+</head>
+<body>
+    <div id="txt">안녕하세요.</div>
+    <br>
+    <button onclick="fontBtn()">글자확대</button>
+</body>
+</html>

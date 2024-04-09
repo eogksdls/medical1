@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수선언방법</title>
+    <script>
+        var a = 0;  // var: 같은 이름으로 중복선언 가능(자동으로 변수 초기화), if&function문에 사용 가능
+        let b = 1; // let: var와 같은 변수(수동으로 변수 초기화)
+        const c = 2; // 상수: 값이 한 번 할당되면, 절대 변경되지 않음
+        document.write(a,"<br>");
+        document.write(b,"<br>");
+        document.write(c,"<br>");
+
+        var a = "홍길동";
+        document.write(a,"<br>");
+
+        // es6 이전 var - 변수
+        // es6 이후 let - 변수, const - 상수
+        // var 중복으로 변수선언 가능
+        // let, const는 초기화를 꼭 해줘야함. 초기화하지 않고 사용시 에러처리
+        // let, const는 지역변수로 선언된 것은 전역에서 사용할 수 없음.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

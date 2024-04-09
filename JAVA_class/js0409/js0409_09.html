@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mbtn(){
+            //alert("test");
+            console.log(document.querySelectorAll("input[type='radio']"));
+            console.log(document.querySelector("input[type='radio']:checked").value);
+            document.querySelector("input[type='radio']:checked").value;
+        }
+    </script>
+</head>
+<body>
+    <input type="radio" name="gender" id="male" value="남성">
+    <label for="male">남성</label>
+    <input type="radio" name="gender" id="female" value="여성">
+    <label for="male">여성</label>
+    <button onclick="mbtn()">확인</button>
+</body>
+</html>

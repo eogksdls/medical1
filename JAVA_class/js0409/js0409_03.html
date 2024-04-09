@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 return</title>
+    <script>
+        let arr_result = []
+
+        function result(num1,num2){
+            var n_total = num1+num2;
+            var n_avg = (num1+num2)/2;
+            arr_result.push(n_total); // 값 집어넣기
+            arr_result.push(n_avg);
+            // return arr_result; // 2개 이상의 리턴값을 줄 수 없다
+            // 2개 이상일 땐 배열로 만들어 호출
+        }
+
+        num1 = Number(prompt("국어점수를 입력하세요."));
+        num2 = Number(prompt("영어점수를 입력하세요."));
+
+        result(num1,num2);
+
+        document.write("결과값 : ",arr_result,"<br>");
+
+    </script>
+</head>
+<body>
+    <button onclick="avg()">평균구하기</button>
+</body>
+</html>

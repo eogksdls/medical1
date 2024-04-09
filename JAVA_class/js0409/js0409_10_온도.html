@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온도변환기</title>
+    <script>
+        // 섭씨 32: (32C* 9/5) +32 = 89.6F;
+        function mbtn(){
+            let cel = document.querySelector("#cel").value;
+            let result = ((cel * 9/5) + 32).toFixed(1); //소숫점 첫째자리까지 나타내라
+            document.querySelector("#fah").innerText = result+"°F";
+        }
+        
+
+    </script>
+    <style>
+        input:focus {outline: none;}
+        div{margin: 5px 0px; text-align: center; width:350px; font-size: 15px;}
+        table{border-collapse: collapse; text-align: center;}
+        td{border: 1px solid #dadce0; box-sizing: border-box; height: 40px;
+        font-size: 25px; font-weight: 600;}
+        button{width: 120px; height: 30px; }
+        #cel{width: 150px; height: 40px; font-size: 25px; font-weight: 600; border: 0;
+        text-align: center;}
+        .td1{border-top:0px; border-bottom: 0px;}
+        .td2{height: 25px; background: #f8f9fa; font-size: 13px;}
+        .tr3{border: 0px;}
+    </style>
+</head>
+<body>
+    <div>
+        <h2>섭씨-화씨 변환 계산</h2>
+    </div>
+    <table>
+        <colgroup>
+            <col width="150px">
+            <col width="50px">
+            <col width="150px">
+        </colgroup>
+        <tr>
+            <td><input type="text" name="cel" id="cel" value="0" onkeypress="mbtn()"></td>
+            <td rowspan="2" class="td1"> = </td>
+            <td id="fah">0</td>
+        </tr>
+        <tr>
+            <td class="td2">섭씨</td>
+            <td class="td2">화씨</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="tr3">
+                <button onclick="mbtn()">확인</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

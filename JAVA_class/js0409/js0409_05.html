@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+    <style>
+        div{width: 500px; height: 200px; border: 3px solid black; }
+    </style>
+    <script>
+        function btn(){
+            document.querySelector("#content").innerText;
+            console.log("content : "+document.querySelector("#content").value);
+            // innerText 문자로 태그에 입력
+            document.querySelector("#main").innerText = document.querySelector("#content").value;
+            // document.querySelector("#main").innerText = "<h2>안녕하세요.</h2>";
+            // innerHtml 태그로 태그 안에 입력
+            // document.querySelector("#main").innerHTML = "<h2>안녕하세요.</h2>";
+            
+            //select 1901~2024년까지 반복
+            var html_year = "";
+            for (var i=1901; i<2025; i++){
+                // html_data += "<option value='1901'>1901년</option>";
+                // html_data += `<option value='${i}'>${i}년</option>`;
+                html_year += "<option value='"+i+"'>"+i+"년</option>";
+            }
+            var html_month = "";
+            for (var i=1; i<13; i++){
+                // html_data += "<option value='1901'>1901년</option>";
+                // html_data += `<option value='${i}'>${i}년</option>`;
+                html_month += "<option value='"+i+"'>"+i+"월</option>";
+            }
+            var html_day = "";
+            for (var i=1; i<32; i++){
+                // html_data += "<option value='1901'>1901년</option>";
+                // html_data += `<option value='${i}'>${i}년</option>`;
+                html_day += "<option value='"+i+"'>"+i+"일</option>";
+            }
+
+            // console.log(html_data);
+            document.querySelector("#year").innerHTML = html_year;
+            document.querySelector("#month").innerHTML = html_month;
+            document.querySelector("#day").innerHTML = html_day;
+        
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+    <br>
+    <label>글을 작성하세요.</label>
+    <input type="text" name="content" id="content">
+    <br><br>
+    <button onclick="btn()">저장</button>
+
+    <script> // 값을 읽어오는 방법!!
+        function birthBtn(){
+            alert("년도 : "+document.querySelector("#year").value);
+        }
+
+
+    </script>
+
+
+    <h2>생년월일</h2>
+    <select id="year"> <!--1901년~2024년-->
+        <option value="1901">1901년</option>
+        <option value="1902">1902년</option>
+        <option value="1903">1903년</option>
+        <option value="1904">1904년</option>
+        <option value="...">...</option>
+        <option value="1905">2024년</option>
+    </select>
+    <select id="month"><!--1월~12월-->
+        <option value="1">1월</option>
+        
+    </select>
+    <select id="day"><!--1일~31일-->
+        <option value="1">1일</option>
+    </select>
+    <button onclick="birthBtn()">데이터 읽기</button>
+</body>
+</html>
