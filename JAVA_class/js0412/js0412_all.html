@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/all.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    *{margin:0; padding:0;}
+    .main{width: 1200px; margin: 50px auto;}
+    .main h2{text-align: center; margin: 20px 0;}
+    .main table{ width: 1200px; border-collapse: collapse;}
+    .main th{height: 45px; background: #efefef; text-align: center; border-top: 3px solid #5c5a5a;}
+    .main td{height: 40px; text-align: center; border-bottom: 1px solid #efefef; }
+    #delBtn{width: 40px; height: 25px;}
+    .button{margin-top: 30px; width: 1200px; display: flex; justify-content: flex-end;}
+    .button button{width: 110px; height: 30px; display: inline-block; margin-left:10px;
+    font-size: 15px;}
+
+    /* 학생성적입력칸*/
+    .p_all{width: 100%; height: 100%; background: rgba(0,0,0,0.2);
+    position: absolute; top:0; display: none;}
+    .p_main{width: 600px; height: 450px; border: 1px solid #ddd;
+    margin: 0 auto; background: white; position: relative; top:25%;}
+    .p_main h2{text-align: center; font-size: 40px; margin: 40px 0;
+    color: #333; font-weight: 700;}
+    .p_main table{width: 600px; text-align: center; border-collapse: collapse;}
+    .p_main table th{padding-left: 50px; text-align: left; font-size: 20px; color: #3b3b3b;}
+    .p_main table td{height: 50px;}
+    .p_main input[type="text"]{width: 380px; height: 40px; padding-left: 20px;
+    border: 1px solid #ddd; box-sizing: border-box;}
+    #in_btn button{width: 140px; height: 40px; font-size: 18px; font-weight: 600;
+    background: rgb(131, 118, 93); border: 0; color: white;}
+    #in_btn{height: 100px; text-align: center;}
+</style>
+<body>
+    <section class="main">
+        <h2>학생성적프로그램</h2>
+        <table>
+            <colgroup>
+                <col width="8%">
+                <col width="8%">
+                <col width="15%">
+                <col width="10%">
+                <col width="10%">
+                <col width="10%">
+                <col width="*">
+                <col width="*">
+                <col width="8%">
+                <col width="9%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th style="font-size:15px;"><input type="checkbox" name="allChk" id="allChk" val="allChk">&nbsp;전체선택</th>
+                    <th>학번</th>
+                    <th>이름</th>
+                    <th>국어</th>
+                    <th>영어</th>
+                    <th>수학</th>
+                    <th>합계</th>
+                    <th>평균</th>
+                    <th>등수</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+                <!-- 이곳이 학생이 추가되는 자리임-->
+            </tbody>
+        </table>
+        <div class="button">
+            <button id="writeBtn"><i class="fa-solid fa-pen"></i>&ensp;학생입력</button>
+            <button id="modifyBtn"><i class="fa-solid fa-pen-to-square"></i>&ensp;학생수정</button>
+            <button id="deleteBtn"><i class="fa-solid fa-trash-can"></i>&ensp;학생삭제</button>
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i>&ensp;학생검색</button>
+        </div>
+    </section>
+    <div class="p_all">
+        <div class="p_main">
+            <h2>학생성적입력</h2>
+            <form action="#" name="frm" method="get">
+                <table>
+                    <colgroup>
+                        <col width="140px">
+                        <col width="400px">
+                    </colgroup>
+                    <tr>
+                        <th>이름</th>
+                        <td><input type="text" name="name" id="name"></td>
+                    </tr>
+                    <tr>
+                        <th>국어 점수</th>
+                        <td><input type="text" name="kor" id="kor"></td>
+                    </tr>
+                    <tr>
+                        <th>영어 점수</th>
+                        <td><input type="text" name="eng" id="eng"></td>
+                    </tr>
+                    <tr>
+                        <th>수학 점수</th>
+                        <td><input type="text" name="math" id="math"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="in_btn">
+                            <button type="button" id="confirmBtn">확인</button>
+                            <button type="button" id="cancelBtn">취소</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

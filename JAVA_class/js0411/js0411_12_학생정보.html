@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>학생 목록</title>
+    <style>
+        section{width: 1400px; margin: 50px auto;}
+        h2{text-align: center;}
+        table{width: 1400px; border-collapse: collapse;}
+        th{border-top: 3px solid black; background: #efefef; height: 45px; text-align: center;}
+        td{border-bottom: 1px solid #efefef; height: 40px; text-align: center;}
+    </style>
+    <script>
+        $(function(){
+            let no = [1,2,3,4,5,6,7,8,9,10];
+            let id = ['aaa','bbb','ccc','Kermie','Briant','Paul','Oliy','Kelbee','Cecily','Ambur'];
+            let pw = ['1111','2222','3333','6281','5853','8738','5567','1956','4808','6960'];
+            let gender = ['F','F','M','M','M','M','F','M','F','F'];
+            let phone = ['375-279-0519','925-375-6116','274-323-6624','943-522-0695','966-196-6833',
+            '938-885-6926','818-736-9562','480-556-3632','385-861-1725','106-322-2104'];
+            let email = ['gtreend0@freewebs.com','bkolakovic1@aol.com','sgreener2@tripadvisor.com','kstollenbeck3@e-recht24.de',
+            'bcoughtrey4@dell.com','pbroker5@jugem.jp','odagostino6@freewebs.com','kmullarkey7@answers.com',
+            'ccarbin8@dagondesign.com','afarrow9@flavors.me'];
+
+            let hdata = "";
+            for(let i=0; i<10; i++){
+                hdata += "<tr id='"+no[i]+"'>";
+                hdata += "<td>"+no[i]+"</td>";
+                hdata += "<td>"+id[i]+"</td>";
+                hdata += "<td>"+pw[i]+"</td>";
+                hdata += "<td>"+gender[i]+"</td>";
+                hdata += "<td>"+phone[i]+"</td>";
+                hdata += "<td>"+email[i]+"</td>";
+                hdata += "<td><button class='delBtn'>삭제</button></td>";
+                hdata += "</tr>";  
+                    
+            }
+            $("tbody").html(hdata);
+
+        })
+    </script>
+</head>
+<body>
+    <section>
+        <h2>학생 정보</h2>
+        <table>
+            <colgroup>
+                <col width="8%">
+                <col width="15%">
+                <col width="15%">
+                <col width="8%">
+                <col width="23%">
+                <col width="23%">
+                <col width="8%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>아이디</th>
+                    <th>비밀번호</th>
+                    <th>성별</th>
+                    <th>전화번호</th>
+                    <th>이메일</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button id="addBtn">학생 추가</button>
+    </section>
+</body>
+</html>
