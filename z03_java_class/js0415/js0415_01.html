@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        #main{width: 300px; height: 200px; margin:50px auto; border: 3px solid black;}
+        #mbtn, #mbtn2{display: block; width: 120px; height: 30px; margin: 20px auto;}
+    </style>
+    <script>
+        $(function(){
+            //버튼 클릭시 main의 배경이 노랑색으로 변경
+            $("#mbtn").click(function(){
+                $("#main").css("background","yellow");
+            });
+            /*
+            //여러 개의 이벤트를 작성하고 싶을 때 on()을 사용, 위 코드와 동일
+            $("#mbtn").on("click",function(){
+                $("#main").css("background","yellow");
+            })
+            */
+
+            //버튼2
+            /*
+            $("#mbtn2").on("mouseover focus",function(){
+                $("#main").css("background","yellow");
+            });
+            */
+            $("#mbtn2").on({
+                "mouseover focus":function(){
+                    $("#main").css("background","yellow");
+                },
+                "mouseout blur":function(){
+                    $("#main").css("background","white");
+                }
+                
+            })
+
+
+        });
+    </script>
+</head>
+<body>
+    <div id="main"></div>
+    <button id="mbtn">확인</button>
+    <button id="mbtn2">버튼2</button>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>학생성적프로그램</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <section class="main">
+        <h2>학생성적프로그램</h2>
+        <div class="search_wrap">
+            <input type="text" name="s_word" id="s_word">
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i>&ensp;검색</button>
+        </div>
+        <table>
+            <colgroup>
+                <col width="8%">
+                <col width="8%">
+                <col width="15%">
+                <col width="10%">
+                <col width="10%">
+                <col width="10%">
+                <col width="*">
+                <col width="*">
+                <col width="9%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th style="font-size:15px;"><input type="checkbox" name="allChk" id="allChk" value="allChk">&nbsp;전체선택</th>
+                    <th>학번</th>
+                    <th>이름</th>
+                    <th>국어</th>
+                    <th>영어</th>
+                    <th>수학</th>
+                    <th>합계</th>
+                    <th>평균</th>
+                    <th>등수</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+
+            </tbody>
+        </table>
+        <div class="button">
+            <button id="writeBtn"><i class="fa-solid fa-pen"></i>&ensp;학생입력</button>
+            <button id="modifyBtn"><i class="fa-solid fa-pen-to-square"></i>&ensp;학생수정</button>
+            <button id="deleteBtn"><i class="fa-solid fa-trash-can"></i>&ensp;학생삭제</button>
+        </div>
+    </section>
+    <div class="p_all">
+        <div class="p_main">
+            <h2>학생성적입력</h2>
+            <form action="#" name="frm" method="get">
+                <input type="hidden" name="id" id="id" value="">
+                <table>
+                    <colgroup>
+                        <col width="140px">
+                        <col width="400px">
+                    </colgroup>
+                    <tr>
+                        <th>이름</th>
+                        <td><input type="text" name="name" id="name" readonly></td>
+                    </tr>
+                    <tr>
+                        <th>국어 점수</th>
+                        <td><input type="text" name="kor" id="kor"></td>
+                    </tr>
+                    <tr>
+                        <th>영어 점수</th>
+                        <td><input type="text" name="eng" id="eng"></td>
+                    </tr>
+                    <tr>
+                        <th>수학 점수</th>
+                        <td><input type="text" name="math" id="math"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="in_btn">
+                            <button type="button" id="confirmBtn">확인</button>
+                            <button type="button" id="cancelBtn">취소</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
