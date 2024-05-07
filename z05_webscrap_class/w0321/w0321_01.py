@@ -2,7 +2,7 @@ import requests
 # 웹에 접근해서 html 소스를 가져옴
 # res = requests.get("https://www.google.com/")   # Response [200]
 res = requests.get("https://www.daum.net//")      # Response [200]
-res = requests.get("https://www.melon.com/index.htm")    # Response [406] -> 웹서핑 과부하, 차단된거임
+# res = requests.get("https://www.melon.com/index.htm")    # Response [406] -> 웹서핑 과부하, 차단된거임
 # 200: 정상
 # 403 & 404: 페이지 없음(클라이언트 오류, 내가잘못)
 # 500: 프로그램 에러(서버 오류, 상대방이잘못)

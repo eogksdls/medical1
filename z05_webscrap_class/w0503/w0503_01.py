@@ -49,13 +49,14 @@ for i in range(len(year)):
     left -= 50
     
     #------------------------------------------------------------------
-    print("[ ",year[i],"년 영화 순위 ]")
-    print("-"*40)
     
     # 3. 웹스크래핑
     soup  = BeautifulSoup(browser.page_source,"lxml")
 
     movie_ul = soup.find("ul",{"class":"c-list-basic ty_flow35"})
+    
+    print("[ ",year[i],"년 영화 순위 ]")
+    print("-"*40)
     for li in movie_ul:
         rank = int(li.find("span",{"class":"badge-basic"}).text)
         print("순위 : ", rank)
